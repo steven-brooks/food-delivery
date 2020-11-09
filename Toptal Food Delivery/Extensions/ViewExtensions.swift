@@ -27,6 +27,7 @@ extension View {
 			}
 		}
 		.frame(maxWidth: .infinity)
+		.animation(.none)
 		.opacity(visible ? 1 : 0)
 		.animation(.easeInOut))
 	}

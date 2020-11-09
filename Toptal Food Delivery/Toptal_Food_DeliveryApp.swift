@@ -11,6 +11,7 @@ import Combine
 @main
 struct Toptal_Food_DeliveryApp: App {
 	init() {
+		
 		UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(named: "toptalGreen")
 		UINavigationBar.appearance().tintColor = UIColor(named: "toptalBlue")
 	}

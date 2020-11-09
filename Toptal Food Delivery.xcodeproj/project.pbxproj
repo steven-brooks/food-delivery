@@ -53,7 +53,6 @@
 		B0C773812551610700BCBAC1 /* RestaurantOwnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C773802551610700BCBAC1 /* RestaurantOwnerView.swift */; };
 		B0C773892551613200BCBAC1 /* RestaurantOwnerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C773882551613200BCBAC1 /* RestaurantOwnerViewModel.swift */; };
 		B0C7738E2551623200BCBAC1 /* MealsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C7738D2551623200BCBAC1 /* MealsService.swift */; };
-		B0F3E1542552968000694D5A /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0F3E1532552968000694D5A /* Launch Screen.storyboard */; };
 		B0F3E1592552991200694D5A /* RestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F3E1582552991200694D5A /* RestaurantView.swift */; };
 		B0F3E16325529C8B00694D5A /* OrderSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F3E16225529C8B00694D5A /* OrderSession.swift */; };
 /* End PBXBuildFile section */
@@ -128,7 +127,6 @@
 		B0C773802551610700BCBAC1 /* RestaurantOwnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantOwnerView.swift; sourceTree = "<group>"; };
 		B0C773882551613200BCBAC1 /* RestaurantOwnerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantOwnerViewModel.swift; sourceTree = "<group>"; };
 		B0C7738D2551623200BCBAC1 /* MealsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsService.swift; sourceTree = "<group>"; };
-		B0F3E1532552968000694D5A /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		B0F3E1582552991200694D5A /* RestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantView.swift; sourceTree = "<group>"; };
 		B0F3E16225529C8B00694D5A /* OrderSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -203,7 +201,6 @@
 				B0759CE5254B6A2100AED55C /* Assets.xcassets */,
 				B0759CEA254B6A2100AED55C /* Info.plist */,
 				B0759CE7254B6A2100AED55C /* Preview Content */,
-				B0F3E1532552968000694D5A /* Launch Screen.storyboard */,
 			);
 			path = "Toptal Food Delivery";
 			sourceTree = "<group>";
@@ -450,7 +447,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0F3E1542552968000694D5A /* Launch Screen.storyboard in Resources */,
 				B0759CE9254B6A2100AED55C /* Preview Assets.xcassets in Resources */,
 				B0759CE6254B6A2100AED55C /* Assets.xcassets in Resources */,
 			);

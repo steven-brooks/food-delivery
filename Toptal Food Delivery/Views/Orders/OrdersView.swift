@@ -41,6 +41,7 @@ struct OrdersView: View {
 				model.update(order: order)
 			}
 		}
+		.frame(maxWidth: .infinity, maxHeight: .infinity)
 		.activityIndicator(model.isServiceActive)
 		.navigationBarTitle("Orders", displayMode: .inline)
 		.navigationBarItems(trailing: Button(action: { model.getOrders() }) {

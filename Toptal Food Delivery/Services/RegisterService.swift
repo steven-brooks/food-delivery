@@ -10,7 +10,7 @@ import Combine
 
 struct RegisterService {
 	
-	func register<T: User>(with info: RegistrationInfo) -> AnyPublisher<T?, Error> {
+	func register<T: User>(with info: RegistrationInfo) -> AnyPublisher<T?, Never> {
 		let path = T.self == Diner.self ? "users" : "owners"
 		
 		var request = URLRequest(url: URLSession.baseUrl.appendingPathComponent("\(path)/\(info.username).json"))
@@ -20,6 +20,7 @@ struct RegisterService {
 		return URLSession.shared.dataTaskPublisher(for: request)
 			.map { $0.data }
 			.decode(type: T?.self, decoder: JSONDecoder())
+			.replaceError(with: nil)
 			.eraseToAnyPublisher()
 	}
 }

@@ -32,7 +32,7 @@
 		<key>UIColorName</key>
 		<string>white</string>
 		<key>UIImageName</key>
-		<string>logo</string>
+		<string>splash</string>
 		<key>UIImageRespectsSafeAreaInsets</key>
 		<true/>
 	</dict>

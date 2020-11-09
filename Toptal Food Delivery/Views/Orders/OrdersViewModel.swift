@@ -51,8 +51,6 @@ class OrdersViewModel: ObservableObject {
 	func update(order: Order) {
 		if let index = orders?.firstIndex(where: {$0.orderId == order.orderId}) {
 			orders?[index] = order
-			let temp = orders
-			orders = temp
 		}
 	}
 }

@@ -17,19 +17,7 @@ struct OrderStatusView: View {
 		VStack {
 			VStack {
 				if model.isRestaurant {
-					Button(action: {model.blockUserAlert = true}) {
-						HStack {
-							Text(model.order.userFullName)
-								.font(.title2)
-							
-							Image(systemName: "exclamationmark.octagon")
-								.resizable()
-								.aspectRatio(contentMode: .fit)
-								.frame(height: 20)
-						}
-					}
-					.buttonStyle(OutlineButtonStyle())
-					.padding(.top)
+					nameButton
 					
 					Divider()
 						.padding(.horizontal)
@@ -115,6 +103,23 @@ struct OrderStatusView: View {
 			  secondaryButton: .destructive(Text("Yes")) {
 				model.toggleUserBlocked()
 			  })
+	}
+	
+	// allow owners to block users from restaurants
+	var nameButton: some View {
+		Button(action: {model.blockUserAlert = true}) {
+			HStack {
+				Text(model.order.userFullName)
+					.font(.title2)
+					.foregroundColor(.toptalDarkGrey)
+				
+				Circle()
+					.foregroundColor(model.restaurant?.blockedUsers.contains(model.order.username) ?? false ? .red : .toptalGreen)
+					.frame(width: 20, height: 20)
+			}
+		}
+		.buttonStyle(OutlineButtonStyle())
+		.padding(.top)
 	}
 }
 

@@ -13,6 +13,7 @@ class RegisterViewModel: ObservableObject {
 	@Published var lastName: String = ""
 	@Published var username: String = ""
 	@Published var password: String = ""
+	@Published var confirmPassword: String = ""
 	
 	@Published var isServiceRunning = false
 	
@@ -26,12 +27,12 @@ class RegisterViewModel: ObservableObject {
 	
 	private var cancellables: [AnyCancellable] = []
 	
-	private var diner: Diner? {
+	@Published var diner: Diner? {
 		didSet {
 			isServiceRunning = false
 		}
 	}
-	private var owner: Owner? {
+	@Published var owner: Owner? {
 		didSet {
 			isServiceRunning = false
 		}
@@ -51,6 +52,10 @@ class RegisterViewModel: ObservableObject {
 		else if password.count < 8 {
 			errorMessage = "Password must be at least 8 characters"
 		}
+		else if confirmPassword != password {
+			confirmPassword = ""
+			errorMessage = "Passwords do not match"
+		}
 		
 		return errorMessage == nil
 	}
@@ -61,12 +66,12 @@ class RegisterViewModel: ObservableObject {
 		isServiceRunning = true
 		if userType == .diner {
 			RegisterService().register(with: info)
-				.replaceError(with: nil)
+				.receive(on: DispatchQueue.main)
 				.assign(to: \.diner, on: self)
 				.store(in: &cancellables)
 		} else {
 			RegisterService().register(with: info)
-				.replaceError(with: nil)
+				.receive(on: DispatchQueue.main)
 				.assign(to: \.owner, on: self)
 				.store(in: &cancellables)
 		}

@@ -15,6 +15,10 @@ class RestaurantsViewModel: ObservableObject {
 		}
 	}
 	@Published var isServiceActive = false
+	
+	func availableRestaurants(for diner: Diner) -> [Restaurant] {
+		restaurants.filter{!$0.blockedUsers.contains(diner.username)}
+	}
 
 	private var cancellables: [AnyCancellable] = []
 	

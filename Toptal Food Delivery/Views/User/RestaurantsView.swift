@@ -18,7 +18,7 @@ struct RestaurantsView: View {
 	
 	var body: some View {
 		List {
-			ForEach(model.restaurants, id: \.name) { restaurant in
+			ForEach(model.availableRestaurants(for: session.diner), id: \.name) { restaurant in
 				NavigationLink(destination: RestaurantView(model: RestaurantViewModel(restaurant: restaurant)).environmentObject(session)) {
 					VStack(alignment: .leading) {
 						Text(restaurant.name)
@@ -34,9 +34,9 @@ struct RestaurantsView: View {
 		.background(Color.toptalDarkGrey.edgesIgnoringSafeArea(.all))
 		.activityIndicator(model.isServiceActive, message: "Fetching Restaurants...")
 		.onAppear() {
-			if model.restaurants.isEmpty {
+			//if model.restaurants.isEmpty {
 				model.fetchRestaurants()
-			}
+			//}
 		}
 	}
 }

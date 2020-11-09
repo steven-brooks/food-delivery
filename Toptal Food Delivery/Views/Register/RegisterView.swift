@@ -10,8 +10,9 @@ import SwiftUI
 struct RegisterView: View {
 	@ObservedObject var model: RegisterViewModel
 	
-	// first name, last name, username, password
-	@State var focused: [Bool] = [true, false, false, false]
+	// first name, last name, username, password, password confirm
+	@State var focused: [Bool] = [true, false, false, false, false]
+	@Environment(\.presentationMode) var presentationMode
 	
 	var body: some View {
 		var tab = 0
@@ -23,12 +24,6 @@ struct RegisterView: View {
 				.frame(maxHeight: 64)
 			
 			HStack {
-//				TextField("First Name", text: $model.firstName)
-//					.textFieldStyle(RoundedBorderTextFieldStyle())
-//
-//				TextField("Last Name", text: $model.lastName)
-//					.textFieldStyle(RoundedBorderTextFieldStyle())
-				
 				TextFieldView(text: $model.firstName, focused: $focused[tab], placeholder: "First Name")
 					.tabOrder(++tab)
 					.autocorrectionType(.no)
@@ -39,17 +34,18 @@ struct RegisterView: View {
 					.autocorrectionType(.no)
 					.textBorder()
 			}
-//			TextField("Username", text: $model.username)
-//				.textFieldStyle(RoundedBorderTextFieldStyle())
-//
-//			TextField("Password", text: $model.password)
-//				.textFieldStyle(RoundedBorderTextFieldStyle())
-			
 			TextFieldView(text: $model.username, focused: $focused[tab], placeholder: "Username")
 				.tabOrder(++tab)
+				.autocorrectionType(.no)
+				.autocapitalizationType(.none)
 				.textBorder()
 
 			TextFieldView(text: $model.password, focused: $focused[tab], placeholder: "Password")
+				.tabOrder(++tab)
+				.isSecureTextEntry(true)
+				.textBorder()
+			
+			TextFieldView(text: $model.confirmPassword, focused: $focused[tab], placeholder: "Confirm Password")
 				.tabOrder(++tab)
 				.isSecureTextEntry(true)
 				.textBorder()
@@ -81,6 +77,16 @@ struct RegisterView: View {
 		.activityIndicator(model.isServiceRunning)
 		.alert(item: $model.errorMessage) {
 			Alert(title: Text($0))
+		}
+		.timedOverlay(item: $model.diner, duration: 1) {
+			presentationMode.wrappedValue.dismiss()
+		} _: { _ in
+			SuccessOverlay(message: "Registration successful!\nYou can now log in.")
+		}
+		.timedOverlay(item: $model.owner, duration: 1) {
+			presentationMode.wrappedValue.dismiss()
+		} _: { _ in
+			SuccessOverlay(message: "Registration successful!\nYou can now log in.")
 		}
 	}
 }

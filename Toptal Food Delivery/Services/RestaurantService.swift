@@ -69,6 +69,7 @@ struct RestaurantService {
 		
 		var request = URLRequest(url: URLSession.baseUrl.appendingPathComponent("restaurants/\(restaurant.id).json"))
 		request.httpMethod = "PATCH"
+		request.httpBody = try? JSONEncoder().encode(PatchRestaurant(restaurant))
 		
 		return URLSession.shared.dataTaskPublisher(for: request)
 			// just look for a 200

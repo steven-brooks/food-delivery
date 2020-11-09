@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct OrderView: View {
-	@State var order: Order
+	var order: Order
 	var showHeader = true
 	var showStatus = true
 	var isRestaurant: Bool

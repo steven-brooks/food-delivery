@@ -27,26 +27,6 @@ struct LoginView: View {
 			Text("Food Delivery")
 				.font(.system(size: 32, weight: .bold))
 			
-			#if targetEnvironment(simulator)
-			HStack {
-				Spacer()
-				Button("User") {
-					model.username = "steven_brooks"
-					model.password = "password"
-					model.login()
-				}
-				.buttonStyle(ToptalButtonStyle())
-				Spacer()
-				Button("Owner") {
-					model.username = "pizzaguy"
-					model.password = "password"
-					model.login()
-				}
-				.buttonStyle(ToptalButtonStyle())
-				Spacer()
-			}
-			#endif
-			
 			TextFieldView(text: $model.username, focused: $focus[0], placeholder: "Username")
 				.autocorrectionType(.no)
 				.autocapitalizationType(.none)

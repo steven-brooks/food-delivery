@@ -132,14 +132,14 @@ class OrderStatusViewModel: ObservableObject {
 	}
 	
 	func toggleUserBlocked() {
-		if var restaurant = restaurant {
-			if restaurant.blockedUsers.contains(order.username) {
-				restaurant.blockedUsers.removeAll(where: {$0 == order.username})
+		if restaurant != nil {
+			if restaurant!.blockedUsers.contains(order.username) {
+				restaurant!.blockedUsers.removeAll(where: {$0 == order.username})
 			} else {
-				restaurant.blockedUsers.append(order.username)
+				restaurant!.blockedUsers.append(order.username)
 			}
 			
-			RestaurantService().update(restaurant: restaurant)
+			RestaurantService().update(restaurant: restaurant!)
 				.receive(on: DispatchQueue.main)
 				.assign(to: \.blockSuccess, on: self)
 				.store(in: &cancellables)
