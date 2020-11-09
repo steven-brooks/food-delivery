@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RestaurantsView: View {
-	@ObservedObject var model: RestaurantsViewModel
+	@StateObject var model: RestaurantsViewModel
 	var session: OrderSession
 	
 	@State var choice: Restaurant?
@@ -33,11 +33,6 @@ struct RestaurantsView: View {
 		.navigationBarTitle("Restaurants")
 		.background(Color.toptalDarkGrey.edgesIgnoringSafeArea(.all))
 		.activityIndicator(model.isServiceActive, message: "Fetching Restaurants...")
-		.onAppear() {
-			//if model.restaurants.isEmpty {
-				model.fetchRestaurants()
-			//}
-		}
 	}
 }
 

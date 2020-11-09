@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CartView: View {
-	@ObservedObject var session: OrderSession
+	@StateObject var session: OrderSession
 	@Environment(\.presentationMode) var presentationMode
 	
 	var body: some View {

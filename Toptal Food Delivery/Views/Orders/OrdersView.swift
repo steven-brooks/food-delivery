@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct OrdersView: View {
-	@ObservedObject var model: OrdersViewModel
+	@StateObject var model: OrdersViewModel
 	@State private var orderToUpdate: Order?
 	
     var body: some View {
@@ -53,9 +53,9 @@ struct OrdersView: View {
 	func section(orders: [Order]) -> some View {
 		ForEach(orders, id: \.orderId) { order in
 			NavigationLink(destination: OrderStatusView(model: OrderStatusViewModel(order: order, restaurant: model.restaurant).onOrderUpdated {
-				// refresh the order if the status was changed
+				// save the order if the status was changed
+				// so that we can update it later
 				orderToUpdate = $0
-				//model.update(order: $0)
 			})) {
 				OrderView(order: order, isRestaurant: model.isRestaurant)
 					.padding()

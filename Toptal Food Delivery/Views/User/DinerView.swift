@@ -10,7 +10,7 @@ import Combine
 
 struct DinerView: View {
 	@Environment(\.presentationMode) var presentationMode
-	@ObservedObject var session: OrderSession
+	@StateObject var session: OrderSession
 	@State var showLogoutAlert = false
 	@State var showCart = false
 	
@@ -30,7 +30,7 @@ struct DinerView: View {
 				}
 			
 			NavigationView {
-				OwnerTransitionView(diner: session.diner)
+				OrdersView(model: OrdersViewModel(diner: session.diner))
 			}
 			.navigationViewStyle(StackNavigationViewStyle())
 				.tabItem {
@@ -46,8 +46,6 @@ struct DinerView: View {
 		.navigationBarTitle(Text("Toptal Food"), displayMode: .inline)
 		.navigationBarBackButtonHidden(true)
 		.navigationBarItems(leading: profileButton, trailing: cartButton)
-		//.alert(isPresented: $showLogoutAlert) { logoutAlert }
-		//.alert(isPresented: $session.orderStartedFromDifferentRestaurant) { multipleRestaurantsAlert }
 		.alert(isPresented: $session.showAlert) {
 			if session.orderStartedFromDifferentRestaurant {
 				return multipleRestaurantsAlert
@@ -76,23 +74,36 @@ struct DinerView: View {
 	
 	var cartButton: some View {
 		Button(action: { showCart.toggle() }) {
-			Image(systemName: "cart")
-				.resizable()
-				.aspectRatio(contentMode: .fit)
-				.frame(width: 30)
-				.foregroundColor(.toptalBlue)
-				.onReceiveIf(session.order?.meals.publisher) { _ in
-					// do some animation
-				}
-				.overlay(Text("\(session.order?.meals.count ?? 0)")
-							.font(.system(size: 11, weight: .bold))
-							.foregroundColor(.white)
-							.background(Circle()
-											.frame(width: 20, height: 20)
-											.foregroundColor(.toptalGreen)
-											.opacity(0.8))
-							.opacity(session.order?.meals.count ?? 0 > 0 ? 1 : 0)
-							.offset(x: 14, y: -12))
+			Cart(order: $session.order)
+			/*ZStack {
+				Image(systemName: "cart")
+					.resizable()
+					.aspectRatio(contentMode: .fit)
+					.frame(width: 30)
+					.foregroundColor(.toptalBlue)
+					.onReceiveIf(session.order?.meals.publisher) { thing in
+						// do some animation
+						cartAnimationProgress = 1
+						withAnimation { cartAnimationProgress = 0 }
+					}
+					.overlay(Text("\(session.order?.meals.count ?? 0)")
+								.font(.system(size: 11, weight: .bold))
+								.foregroundColor(.white)
+								.background(Circle()
+												.frame(width: 20, height: 20)
+												.foregroundColor(.toptalGreen)
+												.opacity(0.8))
+								.opacity(session.order?.meals.count ?? 0 > 0 ? 1 : 0)
+								.offset(x: 14, y: -12))
+				
+				//animated bubble
+				Circle()
+					.frame(width: 20, height: 20)
+					.foregroundColor(.toptalGreen)
+					.opacity(cartAnimationProgress)
+					.scaleEffect(CGFloat(2 - cartAnimationProgress))
+					.offset(x: 14, y: -12)
+			}*/
 		}
 	}
 	
@@ -113,11 +124,48 @@ struct DinerView: View {
 	}
 }
 
-private struct OwnerTransitionView: View {
-	var diner: Diner
+private struct Cart: View {
+	@State var cartAnimationProgress = 0.0
+	@Binding var order: Order?
+	
+	var count: Int { order?.meals.count ?? 0 }
+	@State var lastCount = 0
 	
 	var body: some View {
-		OrdersView(model: OrdersViewModel(diner: diner))
+		ZStack {
+			Image(systemName: "cart")
+				.resizable()
+				.aspectRatio(contentMode: .fit)
+				.frame(width: 30)
+				.foregroundColor(.toptalBlue)
+				.overlay(Text("\(count)")
+							.font(.system(size: 11, weight: .bold))
+							.foregroundColor(.white)
+							.background(Circle()
+											.frame(width: 20, height: 20)
+											.foregroundColor(.toptalGreen)
+											.opacity(0.8))
+							.opacity(count > 0 ? 1 : 0)
+							.offset(x: 14, y: -12))
+			
+			//animated bubble
+			Circle()
+				.frame(width: 20, height: 20)
+				.foregroundColor(.toptalGreen)
+				.opacity(cartAnimationProgress / 2)
+				.scaleEffect(CGFloat(2.5 - cartAnimationProgress * 1.5))
+				.offset(x: 14, y: -12)
+		}
+		.onReceiveIf(order?.meals.publisher, perform: { _ in
+			if order?.meals.count != lastCount {
+				if order?.meals.count ?? 0 > lastCount {
+					// only do the poof if something's being added
+					cartAnimationProgress = 1
+					withAnimation { cartAnimationProgress = 0 }
+				}
+				lastCount = order?.meals.count ?? 0
+			}
+		})
 	}
 }
 

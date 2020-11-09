@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct OwnerView: View {
-	@ObservedObject var model: OwnerViewModel
+	@StateObject var model: OwnerViewModel
 	@State var addingRestaurant = false
 	@State var focused = [false, false]
 	@State var editingRestaurant: Restaurant?
@@ -40,7 +40,7 @@ struct OwnerView: View {
 			
 			List {
 				ForEach(model.owner.restaurants, id: \.name) { restaurant in
-					NavigationLink(destination: MealTransitionView(restaurant: restaurant).environmentObject(model)) {
+					NavigationLink(destination: RestaurantOwnerView(model: RestaurantOwnerViewModel(restaurant: restaurant)).environmentObject(model)) {
 						Text(restaurant.name)
 					}
 					.contextMenu(ContextMenu(menuItems: {
@@ -177,14 +177,6 @@ struct OwnerView: View {
 		model.restaurantToAddDescription = ""
 		focused[1] = false
 		focused[0] = true
-	}
-}
-
-private struct MealTransitionView: View {
-	var restaurant: Restaurant
-	
-	var body: some View {
-		RestaurantOwnerView(model: RestaurantOwnerViewModel(restaurant: restaurant))
 	}
 }
 

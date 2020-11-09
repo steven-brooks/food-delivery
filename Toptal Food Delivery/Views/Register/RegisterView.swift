@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RegisterView: View {
-	@ObservedObject var model: RegisterViewModel
+	@StateObject var model: RegisterViewModel
 	
 	// first name, last name, username, password, password confirm
 	@State var focused: [Bool] = [true, false, false, false, false]
@@ -42,11 +42,15 @@ struct RegisterView: View {
 
 			TextFieldView(text: $model.password, focused: $focused[tab], placeholder: "Password")
 				.tabOrder(++tab)
+				.autocorrectionType(.no)
+				.autocapitalizationType(.none)
 				.isSecureTextEntry(true)
 				.textBorder()
 			
 			TextFieldView(text: $model.confirmPassword, focused: $focused[tab], placeholder: "Confirm Password")
 				.tabOrder(++tab)
+				.autocorrectionType(.no)
+				.autocapitalizationType(.none)
 				.isSecureTextEntry(true)
 				.textBorder()
 			

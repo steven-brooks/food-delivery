@@ -24,6 +24,7 @@ class RestaurantsViewModel: ObservableObject {
 	
 	init(restaurants: [Restaurant] = []) {
 		self.restaurants = restaurants
+		fetchRestaurants()
 	}
 	
 	func fetchRestaurants() {

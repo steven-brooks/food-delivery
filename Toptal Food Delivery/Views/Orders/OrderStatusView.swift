@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct OrderStatusView: View {
-	@ObservedObject var model: OrderStatusViewModel
+	@StateObject var model: OrderStatusViewModel
 	@Environment(\.presentationMode) var presentationMode
 	
 	var onOrderUpdated: (() -> ())? = nil

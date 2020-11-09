@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RestaurantOwnerView: View {
-	@ObservedObject var model: RestaurantOwnerViewModel
+	@StateObject var model: RestaurantOwnerViewModel
 	@State var addingMeal = false
 	@State var editingMeal: Meal?
 	
@@ -18,8 +18,7 @@ struct RestaurantOwnerView: View {
 		
     var body: some View {
 		VStack(spacing: 0) {
-			NavigationLink(destination: StatusTransition(restaurant: model.restaurant), isActive: $gotoOrders) {}
-	//		StatusTransition(restaurant: model.restaurant, isActive: $gotoOrders)
+			NavigationLink(destination: OrdersView(model: OrdersViewModel(restaurant: model.restaurant)), isActive: $gotoOrders) {}
 			
 			Button(action: { toggleEditing() }) {
 				if !addingMeal {
@@ -74,7 +73,7 @@ struct RestaurantOwnerView: View {
 			}
 			.listStyle(InsetGroupedListStyle())
 		}
-//		.activityIndicator(model.isServiceRunning)
+		.activityIndicator(model.isServiceRunning)
 		.navigationBarTitle(model.restaurant.name, displayMode: .inline)
 		.navigationBarItems(trailing: ordersButton)
 		// meal added
@@ -197,14 +196,6 @@ struct RestaurantOwnerView: View {
 		else if let meal = model.validateMealToAdd() {
 			model.add(meal: meal)
 		}
-	}
-}
-
-private struct StatusTransition: View {
-	var restaurant: Restaurant
-	
-	var body: some View {
-		OrdersView(model: OrdersViewModel(restaurant: restaurant))
 	}
 }
 

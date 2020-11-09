@@ -35,6 +35,7 @@ struct TextFieldView : UIViewRepresentable {
 		view.addTarget(context.coordinator, action: #selector(TextFieldView.Coordinator.textFieldDidChange), for: .editingChanged)
 		view.textColor = UIColor(named: "toptalDarkGrey")
 		view.tintColor = UIColor(named: "totalBlue")
+		view.clearButtonMode = .whileEditing
 		return view
 	}
 

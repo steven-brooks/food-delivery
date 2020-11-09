@@ -20,7 +20,6 @@ struct OrderView: View {
 					HStack {
 						Text("Status: \(order.status.rawValue.capitalized)")
 						Spacer()
-						//Text(order.datePlaced, formatter: DateFormatter.shortFormatter)
 					}
 					.font(.footnote)
 				}

@@ -58,8 +58,7 @@ struct LoginView: View {
 			HStack {
 				Text("No Account?")
 
-				NavigationLink(destination: TransitionView() ) {
-				//Button(action: { showRegistration = true} ){
+				NavigationLink(destination: RegisterView(model: RegisterViewModel()) ) {
 					Text("Register Here")
 						.foregroundColor(.toptalBlue)
 				}
@@ -86,36 +85,14 @@ struct LoginView: View {
 		.fullScreenCover(isPresented: $model.validUser) {
 			if let owner = model.owner {
 				NavigationView {
-					OwnerTransitionView(owner: owner)
+					OwnerView(model: OwnerViewModel(owner: owner))
 				}
 			}
 			else if let diner = model.diner {
 				NavigationView {
-					DinerTransitionView(diner: diner)
+					DinerView(session: OrderSession(diner: diner))
 				}
 			}
-		}
-	}
-
-	private struct TransitionView: View {
-		var body: some View {
-			RegisterView(model: RegisterViewModel())
-		}
-	}
-
-	private struct DinerTransitionView: View {
-		var diner: Diner
-		
-		var body: some View {
-			DinerView(session: OrderSession(diner: diner))
-		}
-	}
-
-	private struct OwnerTransitionView: View {
-		var owner: Owner
-		
-		var body: some View {
-			OwnerView(model: OwnerViewModel(owner: owner))
 		}
 	}
 }

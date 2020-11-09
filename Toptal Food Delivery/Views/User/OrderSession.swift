@@ -24,7 +24,7 @@ class OrderSession: ObservableObject {
 		}
 	}
 	
-	@Published var errorMessage: String? {
+	var errorMessage: String? {
 		didSet {
 			if errorMessage != nil {
 				showAlert = true
@@ -32,7 +32,7 @@ class OrderSession: ObservableObject {
 		}
 	}
 
-	@Published var orderStartedFromDifferentRestaurant = false {
+	var orderStartedFromDifferentRestaurant = false {
 		didSet {
 			if orderStartedFromDifferentRestaurant {
 				showAlert = true
@@ -40,7 +40,7 @@ class OrderSession: ObservableObject {
 		}
 	}
 	
-	@Published var showLogoutAlert = false {
+	var showLogoutAlert = false {
 		didSet {
 			if showLogoutAlert {
 				showAlert = true
@@ -49,7 +49,7 @@ class OrderSession: ObservableObject {
 	}
 	
 	// cart related alert
-	var showCartAlert = false {
+	@Published var showCartAlert = false {
 		didSet {
 			if !showCartAlert {
 				cartErrorMessage = nil

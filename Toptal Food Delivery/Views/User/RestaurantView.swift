@@ -42,7 +42,7 @@ struct RestaurantView: View {
 				Divider()
 			}
 		}
-		.padding()//[.bottom, .horizontal])
+		.padding()
 		.onAppear() {
 			model.fetchMeals()
 		}
