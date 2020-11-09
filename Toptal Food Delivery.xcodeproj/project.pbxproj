@@ -1,0 +1,845 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B068348D2551122900311810 /* DinerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B068348C2551122900311810 /* DinerView.swift */; };
+		B0759CE2254B6A1F00AED55C /* Toptal_Food_DeliveryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0759CE1254B6A1F00AED55C /* Toptal_Food_DeliveryApp.swift */; };
+		B0759CE4254B6A1F00AED55C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0759CE3254B6A1F00AED55C /* ContentView.swift */; };
+		B0759CE6254B6A2100AED55C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0759CE5254B6A2100AED55C /* Assets.xcassets */; };
+		B0759CE9254B6A2100AED55C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0759CE8254B6A2100AED55C /* Preview Assets.xcassets */; };
+		B0759CF4254B6A2100AED55C /* Toptal_Food_DeliveryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0759CF3254B6A2100AED55C /* Toptal_Food_DeliveryTests.swift */; };
+		B0759CFF254B6A2100AED55C /* Toptal_Food_DeliveryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0759CFE254B6A2100AED55C /* Toptal_Food_DeliveryUITests.swift */; };
+		B0759D11254B6BE700AED55C /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0759D10254B6BE700AED55C /* Restaurant.swift */; };
+		B0759D19254B6BF000AED55C /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0759D18254B6BF000AED55C /* Meal.swift */; };
+		B0759D1F254B6C6200AED55C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0759D1E254B6C6200AED55C /* LoginView.swift */; };
+		B0759D28254B6E6300AED55C /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0759D27254B6E6300AED55C /* ColorExtensions.swift */; };
+		B0759D31254B768D00AED55C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0759D30254B768D00AED55C /* LoginViewModel.swift */; };
+		B0759D39254B77D100AED55C /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0759D38254B77D100AED55C /* RegisterViewModel.swift */; };
+		B0759D3E254BD38400AED55C /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0759D3D254BD38400AED55C /* Owner.swift */; };
+		B0759D43254BD3B400AED55C /* Diner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0759D42254BD3B400AED55C /* Diner.swift */; };
+		B0759D48254BD3EE00AED55C /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0759D47254BD3EE00AED55C /* RegisterView.swift */; };
+		B07C035D25554B2C00700446 /* OrderStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07C035C25554B2C00700446 /* OrderStatusView.swift */; };
+		B07C036225554B5600700446 /* OrderStatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07C036125554B5600700446 /* OrderStatusViewModel.swift */; };
+		B07C036725554CDA00700446 /* DateFormatterExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07C036625554CDA00700446 /* DateFormatterExtensions.swift */; };
+		B07C037225554D9900700446 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07C037125554D9900700446 /* OrderView.swift */; };
+		B07C03772555507100700446 /* StatusDial.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07C03762555507100700446 /* StatusDial.swift */; };
+		B08B1DEE254FD63500665EE9 /* RestaurantService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08B1DED254FD63500665EE9 /* RestaurantService.swift */; };
+		B08B1DF625506AB700665EE9 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08B1DF525506AB700665EE9 /* Order.swift */; };
+		B08B1E0425506DE300665EE9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08B1E0325506DE300665EE9 /* User.swift */; };
+		B08B1E09255087C700665EE9 /* IntExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08B1E08255087C700665EE9 /* IntExtensions.swift */; };
+		B09F488A2551068100FE3C98 /* RestaurantsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09F48892551068100FE3C98 /* RestaurantsView.swift */; };
+		B09F48922551073D00FE3C98 /* RestaurantsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09F48912551073D00FE3C98 /* RestaurantsViewModel.swift */; };
+		B0AE7B5025533F8E00F5231F /* RestaurantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AE7B4F25533F8E00F5231F /* RestaurantViewModel.swift */; };
+		B0AE7B5B25534A3100F5231F /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AE7B5A25534A3100F5231F /* CartView.swift */; };
+		B0AE7B6325537E7E00F5231F /* OrderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AE7B6225537E7E00F5231F /* OrderService.swift */; };
+		B0AE7BDB2554B65D00F5231F /* OrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AE7BDA2554B65D00F5231F /* OrdersView.swift */; };
+		B0AE7BE02554B67300F5231F /* OrdersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AE7BDF2554B67300F5231F /* OrdersViewModel.swift */; };
+		B0C6C76B254BDE9100427E24 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C6C76A254BDE9100427E24 /* RegisterService.swift */; };
+		B0C6C773254BDFB600427E24 /* RegistrationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C6C772254BDFB600427E24 /* RegistrationInfo.swift */; };
+		B0C6C778254BF22D00427E24 /* URLSessionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C6C777254BF22D00427E24 /* URLSessionExtensions.swift */; };
+		B0C6C77D254BF8FB00427E24 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C6C77C254BF8FB00427E24 /* StringExtensions.swift */; };
+		B0C6C788254C791600427E24 /* OwnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C6C787254C791600427E24 /* OwnerView.swift */; };
+		B0C6C790254C79DE00427E24 /* OwnerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C6C78F254C79DE00427E24 /* OwnerViewModel.swift */; };
+		B0C6C79E254C9C4600427E24 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C6C79D254C9C4600427E24 /* LoginService.swift */; };
+		B0C6C7AE254E6F6100427E24 /* TextBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C6C7AD254E6F6100427E24 /* TextBoxView.swift */; };
+		B0C6C7B9254E712E00427E24 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C6C7B8254E712E00427E24 /* TextFieldView.swift */; };
+		B0C6C7C7254E775C00427E24 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C6C7C6254E775C00427E24 /* ViewExtensions.swift */; };
+		B0C6C7CC254E77BF00427E24 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C6C7CB254E77BF00427E24 /* ActivityIndicator.swift */; };
+		B0C773812551610700BCBAC1 /* RestaurantOwnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C773802551610700BCBAC1 /* RestaurantOwnerView.swift */; };
+		B0C773892551613200BCBAC1 /* RestaurantOwnerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C773882551613200BCBAC1 /* RestaurantOwnerViewModel.swift */; };
+		B0C7738E2551623200BCBAC1 /* MealsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C7738D2551623200BCBAC1 /* MealsService.swift */; };
+		B0F3E1542552968000694D5A /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0F3E1532552968000694D5A /* Launch Screen.storyboard */; };
+		B0F3E1592552991200694D5A /* RestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F3E1582552991200694D5A /* RestaurantView.swift */; };
+		B0F3E16325529C8B00694D5A /* OrderSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F3E16225529C8B00694D5A /* OrderSession.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B0759CF0254B6A2100AED55C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0759CD6254B6A1F00AED55C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0759CDD254B6A1F00AED55C;
+			remoteInfo = "Toptal Food Delivery";
+		};
+		B0759CFB254B6A2100AED55C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0759CD6254B6A1F00AED55C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0759CDD254B6A1F00AED55C;
+			remoteInfo = "Toptal Food Delivery";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B068348C2551122900311810 /* DinerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinerView.swift; sourceTree = "<group>"; };
+		B0759CDE254B6A1F00AED55C /* Toptal Food.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Toptal Food.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0759CE1254B6A1F00AED55C /* Toptal_Food_DeliveryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toptal_Food_DeliveryApp.swift; sourceTree = "<group>"; };
+		B0759CE3254B6A1F00AED55C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B0759CE5254B6A2100AED55C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B0759CE8254B6A2100AED55C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B0759CEA254B6A2100AED55C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0759CEF254B6A2100AED55C /* Toptal Food DeliveryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Toptal Food DeliveryTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0759CF3254B6A2100AED55C /* Toptal_Food_DeliveryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toptal_Food_DeliveryTests.swift; sourceTree = "<group>"; };
+		B0759CF5254B6A2100AED55C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0759CFA254B6A2100AED55C /* Toptal Food DeliveryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Toptal Food DeliveryUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0759CFE254B6A2100AED55C /* Toptal_Food_DeliveryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toptal_Food_DeliveryUITests.swift; sourceTree = "<group>"; };
+		B0759D00254B6A2100AED55C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0759D10254B6BE700AED55C /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		B0759D18254B6BF000AED55C /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		B0759D1E254B6C6200AED55C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		B0759D27254B6E6300AED55C /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
+		B0759D30254B768D00AED55C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		B0759D38254B77D100AED55C /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		B0759D3D254BD38400AED55C /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		B0759D42254BD3B400AED55C /* Diner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diner.swift; sourceTree = "<group>"; };
+		B0759D47254BD3EE00AED55C /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		B07C035C25554B2C00700446 /* OrderStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderStatusView.swift; sourceTree = "<group>"; };
+		B07C036125554B5600700446 /* OrderStatusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderStatusViewModel.swift; sourceTree = "<group>"; };
+		B07C036625554CDA00700446 /* DateFormatterExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterExtensions.swift; sourceTree = "<group>"; };
+		B07C037125554D9900700446 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
+		B07C03762555507100700446 /* StatusDial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusDial.swift; sourceTree = "<group>"; };
+		B08B1DED254FD63500665EE9 /* RestaurantService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantService.swift; sourceTree = "<group>"; };
+		B08B1DF525506AB700665EE9 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		B08B1E0325506DE300665EE9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B08B1E08255087C700665EE9 /* IntExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtensions.swift; sourceTree = "<group>"; };
+		B09F48892551068100FE3C98 /* RestaurantsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsView.swift; sourceTree = "<group>"; };
+		B09F48912551073D00FE3C98 /* RestaurantsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsViewModel.swift; sourceTree = "<group>"; };
+		B0AE7B4F25533F8E00F5231F /* RestaurantViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewModel.swift; sourceTree = "<group>"; };
+		B0AE7B5A25534A3100F5231F /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		B0AE7B6225537E7E00F5231F /* OrderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderService.swift; sourceTree = "<group>"; };
+		B0AE7BDA2554B65D00F5231F /* OrdersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersView.swift; sourceTree = "<group>"; };
+		B0AE7BDF2554B67300F5231F /* OrdersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewModel.swift; sourceTree = "<group>"; };
+		B0C6C76A254BDE9100427E24 /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
+		B0C6C772254BDFB600427E24 /* RegistrationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationInfo.swift; sourceTree = "<group>"; };
+		B0C6C777254BF22D00427E24 /* URLSessionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExtensions.swift; sourceTree = "<group>"; };
+		B0C6C77C254BF8FB00427E24 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		B0C6C787254C791600427E24 /* OwnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerView.swift; sourceTree = "<group>"; };
+		B0C6C78F254C79DE00427E24 /* OwnerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerViewModel.swift; sourceTree = "<group>"; };
+		B0C6C79D254C9C4600427E24 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		B0C6C7AD254E6F6100427E24 /* TextBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBoxView.swift; sourceTree = "<group>"; };
+		B0C6C7B8254E712E00427E24 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		B0C6C7C6254E775C00427E24 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		B0C6C7CB254E77BF00427E24 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		B0C773802551610700BCBAC1 /* RestaurantOwnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantOwnerView.swift; sourceTree = "<group>"; };
+		B0C773882551613200BCBAC1 /* RestaurantOwnerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantOwnerViewModel.swift; sourceTree = "<group>"; };
+		B0C7738D2551623200BCBAC1 /* MealsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsService.swift; sourceTree = "<group>"; };
+		B0F3E1532552968000694D5A /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		B0F3E1582552991200694D5A /* RestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantView.swift; sourceTree = "<group>"; };
+		B0F3E16225529C8B00694D5A /* OrderSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSession.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B0759CDB254B6A1F00AED55C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0759CEC254B6A2100AED55C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0759CF7254B6A2100AED55C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B03636712556864F00486F1A /* Orders */ = {
+			isa = PBXGroup;
+			children = (
+				B07C03762555507100700446 /* StatusDial.swift */,
+				B07C037125554D9900700446 /* OrderView.swift */,
+				B0AE7BDA2554B65D00F5231F /* OrdersView.swift */,
+				B0AE7BDF2554B67300F5231F /* OrdersViewModel.swift */,
+				B07C035C25554B2C00700446 /* OrderStatusView.swift */,
+				B07C036125554B5600700446 /* OrderStatusViewModel.swift */,
+			);
+			path = Orders;
+			sourceTree = "<group>";
+		};
+		B0759CD5254B6A1F00AED55C = {
+			isa = PBXGroup;
+			children = (
+				B0759CE0254B6A1F00AED55C /* Toptal Food Delivery */,
+				B0759CF2254B6A2100AED55C /* Toptal Food DeliveryTests */,
+				B0759CFD254B6A2100AED55C /* Toptal Food DeliveryUITests */,
+				B0759CDF254B6A1F00AED55C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B0759CDF254B6A1F00AED55C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B0759CDE254B6A1F00AED55C /* Toptal Food.app */,
+				B0759CEF254B6A2100AED55C /* Toptal Food DeliveryTests.xctest */,
+				B0759CFA254B6A2100AED55C /* Toptal Food DeliveryUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B0759CE0254B6A1F00AED55C /* Toptal Food Delivery */ = {
+			isa = PBXGroup;
+			children = (
+				B0C6C769254BDE8500427E24 /* Services */,
+				B0759D26254B6E1B00AED55C /* Extensions */,
+				B0759D1D254B6C5500AED55C /* Views */,
+				B0759D0F254B6BD800AED55C /* Model */,
+				B0759CE1254B6A1F00AED55C /* Toptal_Food_DeliveryApp.swift */,
+				B0759CE3254B6A1F00AED55C /* ContentView.swift */,
+				B0759CE5254B6A2100AED55C /* Assets.xcassets */,
+				B0759CEA254B6A2100AED55C /* Info.plist */,
+				B0759CE7254B6A2100AED55C /* Preview Content */,
+				B0F3E1532552968000694D5A /* Launch Screen.storyboard */,
+			);
+			path = "Toptal Food Delivery";
+			sourceTree = "<group>";
+		};
+		B0759CE7254B6A2100AED55C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B0759CE8254B6A2100AED55C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B0759CF2254B6A2100AED55C /* Toptal Food DeliveryTests */ = {
+			isa = PBXGroup;
+			children = (
+				B0759CF3254B6A2100AED55C /* Toptal_Food_DeliveryTests.swift */,
+				B0759CF5254B6A2100AED55C /* Info.plist */,
+			);
+			path = "Toptal Food DeliveryTests";
+			sourceTree = "<group>";
+		};
+		B0759CFD254B6A2100AED55C /* Toptal Food DeliveryUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B0759CFE254B6A2100AED55C /* Toptal_Food_DeliveryUITests.swift */,
+				B0759D00254B6A2100AED55C /* Info.plist */,
+			);
+			path = "Toptal Food DeliveryUITests";
+			sourceTree = "<group>";
+		};
+		B0759D0F254B6BD800AED55C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B0759D10254B6BE700AED55C /* Restaurant.swift */,
+				B0759D18254B6BF000AED55C /* Meal.swift */,
+				B0759D3D254BD38400AED55C /* Owner.swift */,
+				B0759D42254BD3B400AED55C /* Diner.swift */,
+				B0C6C772254BDFB600427E24 /* RegistrationInfo.swift */,
+				B08B1DF525506AB700665EE9 /* Order.swift */,
+				B08B1E0325506DE300665EE9 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B0759D1D254B6C5500AED55C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B03636712556864F00486F1A /* Orders */,
+				B09F48882551066E00FE3C98 /* User */,
+				B0C6C7AC254E6F1A00427E24 /* UIKit */,
+				B0C6C786254C78F100427E24 /* Owner */,
+				B0759D4D254BD3FF00AED55C /* Register */,
+				B0759D4C254BD3FB00AED55C /* Login */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B0759D26254B6E1B00AED55C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B0759D27254B6E6300AED55C /* ColorExtensions.swift */,
+				B0C6C777254BF22D00427E24 /* URLSessionExtensions.swift */,
+				B0C6C77C254BF8FB00427E24 /* StringExtensions.swift */,
+				B0C6C7C6254E775C00427E24 /* ViewExtensions.swift */,
+				B08B1E08255087C700665EE9 /* IntExtensions.swift */,
+				B07C036625554CDA00700446 /* DateFormatterExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B0759D4C254BD3FB00AED55C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B0759D30254B768D00AED55C /* LoginViewModel.swift */,
+				B0759D1E254B6C6200AED55C /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		B0759D4D254BD3FF00AED55C /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				B0759D38254B77D100AED55C /* RegisterViewModel.swift */,
+				B0759D47254BD3EE00AED55C /* RegisterView.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		B09F48882551066E00FE3C98 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				B09F48892551068100FE3C98 /* RestaurantsView.swift */,
+				B09F48912551073D00FE3C98 /* RestaurantsViewModel.swift */,
+				B0F3E1582552991200694D5A /* RestaurantView.swift */,
+				B0AE7B4F25533F8E00F5231F /* RestaurantViewModel.swift */,
+				B0F3E16225529C8B00694D5A /* OrderSession.swift */,
+				B0AE7B5A25534A3100F5231F /* CartView.swift */,
+				B068348C2551122900311810 /* DinerView.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		B0C6C769254BDE8500427E24 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B0C6C76A254BDE9100427E24 /* RegisterService.swift */,
+				B0C6C79D254C9C4600427E24 /* LoginService.swift */,
+				B08B1DED254FD63500665EE9 /* RestaurantService.swift */,
+				B0C7738D2551623200BCBAC1 /* MealsService.swift */,
+				B0AE7B6225537E7E00F5231F /* OrderService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B0C6C786254C78F100427E24 /* Owner */ = {
+			isa = PBXGroup;
+			children = (
+				B0C6C799254C944D00427E24 /* Restaurant */,
+				B0C6C787254C791600427E24 /* OwnerView.swift */,
+				B0C6C78F254C79DE00427E24 /* OwnerViewModel.swift */,
+			);
+			path = Owner;
+			sourceTree = "<group>";
+		};
+		B0C6C799254C944D00427E24 /* Restaurant */ = {
+			isa = PBXGroup;
+			children = (
+				B0C773802551610700BCBAC1 /* RestaurantOwnerView.swift */,
+				B0C773882551613200BCBAC1 /* RestaurantOwnerViewModel.swift */,
+			);
+			path = Restaurant;
+			sourceTree = "<group>";
+		};
+		B0C6C7AC254E6F1A00427E24 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				B0C6C7AD254E6F6100427E24 /* TextBoxView.swift */,
+				B0C6C7B8254E712E00427E24 /* TextFieldView.swift */,
+				B0C6C7CB254E77BF00427E24 /* ActivityIndicator.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B0759CDD254B6A1F00AED55C /* Toptal Food Delivery */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0759D03254B6A2100AED55C /* Build configuration list for PBXNativeTarget "Toptal Food Delivery" */;
+			buildPhases = (
+				B0759CDA254B6A1F00AED55C /* Sources */,
+				B0759CDB254B6A1F00AED55C /* Frameworks */,
+				B0759CDC254B6A1F00AED55C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Toptal Food Delivery";
+			productName = "Toptal Food Delivery";
+			productReference = B0759CDE254B6A1F00AED55C /* Toptal Food.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B0759CEE254B6A2100AED55C /* Toptal Food DeliveryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0759D06254B6A2100AED55C /* Build configuration list for PBXNativeTarget "Toptal Food DeliveryTests" */;
+			buildPhases = (
+				B0759CEB254B6A2100AED55C /* Sources */,
+				B0759CEC254B6A2100AED55C /* Frameworks */,
+				B0759CED254B6A2100AED55C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B0759CF1254B6A2100AED55C /* PBXTargetDependency */,
+			);
+			name = "Toptal Food DeliveryTests";
+			productName = "Toptal Food DeliveryTests";
+			productReference = B0759CEF254B6A2100AED55C /* Toptal Food DeliveryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B0759CF9254B6A2100AED55C /* Toptal Food DeliveryUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0759D09254B6A2100AED55C /* Build configuration list for PBXNativeTarget "Toptal Food DeliveryUITests" */;
+			buildPhases = (
+				B0759CF6254B6A2100AED55C /* Sources */,
+				B0759CF7254B6A2100AED55C /* Frameworks */,
+				B0759CF8254B6A2100AED55C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B0759CFC254B6A2100AED55C /* PBXTargetDependency */,
+			);
+			name = "Toptal Food DeliveryUITests";
+			productName = "Toptal Food DeliveryUITests";
+			productReference = B0759CFA254B6A2100AED55C /* Toptal Food DeliveryUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B0759CD6254B6A1F00AED55C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					B0759CDD254B6A1F00AED55C = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					B0759CEE254B6A2100AED55C = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = B0759CDD254B6A1F00AED55C;
+					};
+					B0759CF9254B6A2100AED55C = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = B0759CDD254B6A1F00AED55C;
+					};
+				};
+			};
+			buildConfigurationList = B0759CD9254B6A1F00AED55C /* Build configuration list for PBXProject "Toptal Food Delivery" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B0759CD5254B6A1F00AED55C;
+			productRefGroup = B0759CDF254B6A1F00AED55C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B0759CDD254B6A1F00AED55C /* Toptal Food Delivery */,
+				B0759CEE254B6A2100AED55C /* Toptal Food DeliveryTests */,
+				B0759CF9254B6A2100AED55C /* Toptal Food DeliveryUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B0759CDC254B6A1F00AED55C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0F3E1542552968000694D5A /* Launch Screen.storyboard in Resources */,
+				B0759CE9254B6A2100AED55C /* Preview Assets.xcassets in Resources */,
+				B0759CE6254B6A2100AED55C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0759CED254B6A2100AED55C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0759CF8254B6A2100AED55C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B0759CDA254B6A1F00AED55C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0759D48254BD3EE00AED55C /* RegisterView.swift in Sources */,
+				B0759D19254B6BF000AED55C /* Meal.swift in Sources */,
+				B0C6C778254BF22D00427E24 /* URLSessionExtensions.swift in Sources */,
+				B0AE7B5025533F8E00F5231F /* RestaurantViewModel.swift in Sources */,
+				B068348D2551122900311810 /* DinerView.swift in Sources */,
+				B0759CE4254B6A1F00AED55C /* ContentView.swift in Sources */,
+				B0C6C7CC254E77BF00427E24 /* ActivityIndicator.swift in Sources */,
+				B0759CE2254B6A1F00AED55C /* Toptal_Food_DeliveryApp.swift in Sources */,
+				B09F488A2551068100FE3C98 /* RestaurantsView.swift in Sources */,
+				B07C035D25554B2C00700446 /* OrderStatusView.swift in Sources */,
+				B0C6C788254C791600427E24 /* OwnerView.swift in Sources */,
+				B0AE7BE02554B67300F5231F /* OrdersViewModel.swift in Sources */,
+				B0F3E16325529C8B00694D5A /* OrderSession.swift in Sources */,
+				B07C03772555507100700446 /* StatusDial.swift in Sources */,
+				B0C6C790254C79DE00427E24 /* OwnerViewModel.swift in Sources */,
+				B0C6C79E254C9C4600427E24 /* LoginService.swift in Sources */,
+				B0C6C7AE254E6F6100427E24 /* TextBoxView.swift in Sources */,
+				B0AE7B6325537E7E00F5231F /* OrderService.swift in Sources */,
+				B0759D39254B77D100AED55C /* RegisterViewModel.swift in Sources */,
+				B08B1E09255087C700665EE9 /* IntExtensions.swift in Sources */,
+				B09F48922551073D00FE3C98 /* RestaurantsViewModel.swift in Sources */,
+				B0C773812551610700BCBAC1 /* RestaurantOwnerView.swift in Sources */,
+				B0AE7B5B25534A3100F5231F /* CartView.swift in Sources */,
+				B08B1DF625506AB700665EE9 /* Order.swift in Sources */,
+				B0759D3E254BD38400AED55C /* Owner.swift in Sources */,
+				B0C6C76B254BDE9100427E24 /* RegisterService.swift in Sources */,
+				B07C037225554D9900700446 /* OrderView.swift in Sources */,
+				B07C036225554B5600700446 /* OrderStatusViewModel.swift in Sources */,
+				B0759D1F254B6C6200AED55C /* LoginView.swift in Sources */,
+				B0C6C7B9254E712E00427E24 /* TextFieldView.swift in Sources */,
+				B0C6C773254BDFB600427E24 /* RegistrationInfo.swift in Sources */,
+				B0F3E1592552991200694D5A /* RestaurantView.swift in Sources */,
+				B0C6C7C7254E775C00427E24 /* ViewExtensions.swift in Sources */,
+				B08B1E0425506DE300665EE9 /* User.swift in Sources */,
+				B0759D11254B6BE700AED55C /* Restaurant.swift in Sources */,
+				B0C7738E2551623200BCBAC1 /* MealsService.swift in Sources */,
+				B07C036725554CDA00700446 /* DateFormatterExtensions.swift in Sources */,
+				B0759D28254B6E6300AED55C /* ColorExtensions.swift in Sources */,
+				B08B1DEE254FD63500665EE9 /* RestaurantService.swift in Sources */,
+				B0AE7BDB2554B65D00F5231F /* OrdersView.swift in Sources */,
+				B0C773892551613200BCBAC1 /* RestaurantOwnerViewModel.swift in Sources */,
+				B0C6C77D254BF8FB00427E24 /* StringExtensions.swift in Sources */,
+				B0759D43254BD3B400AED55C /* Diner.swift in Sources */,
+				B0759D31254B768D00AED55C /* LoginViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0759CEB254B6A2100AED55C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0759CF4254B6A2100AED55C /* Toptal_Food_DeliveryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0759CF6254B6A2100AED55C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0759CFF254B6A2100AED55C /* Toptal_Food_DeliveryUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B0759CF1254B6A2100AED55C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B0759CDD254B6A1F00AED55C /* Toptal Food Delivery */;
+			targetProxy = B0759CF0254B6A2100AED55C /* PBXContainerItemProxy */;
+		};
+		B0759CFC254B6A2100AED55C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B0759CDD254B6A1F00AED55C /* Toptal Food Delivery */;
+			targetProxy = B0759CFB254B6A2100AED55C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B0759D01254B6A2100AED55C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B0759D02254B6A2100AED55C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B0759D04254B6A2100AED55C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Toptal Food Delivery/Preview Content\"";
+				DEVELOPMENT_TEAM = 7XEP77EB7U;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Toptal Food Delivery/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.toptal.Toptal-Food-Delivery";
+				PRODUCT_NAME = "Toptal Food";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B0759D05254B6A2100AED55C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Toptal Food Delivery/Preview Content\"";
+				DEVELOPMENT_TEAM = 7XEP77EB7U;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Toptal Food Delivery/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.toptal.Toptal-Food-Delivery";
+				PRODUCT_NAME = "Toptal Food";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B0759D07254B6A2100AED55C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7XEP77EB7U;
+				INFOPLIST_FILE = "Toptal Food DeliveryTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.toptal.Toptal-Food-DeliveryTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Toptal Food Delivery.app/Toptal Food Delivery";
+			};
+			name = Debug;
+		};
+		B0759D08254B6A2100AED55C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7XEP77EB7U;
+				INFOPLIST_FILE = "Toptal Food DeliveryTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.toptal.Toptal-Food-DeliveryTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Toptal Food Delivery.app/Toptal Food Delivery";
+			};
+			name = Release;
+		};
+		B0759D0A254B6A2100AED55C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7XEP77EB7U;
+				INFOPLIST_FILE = "Toptal Food DeliveryUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.toptal.Toptal-Food-DeliveryUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Toptal Food Delivery";
+			};
+			name = Debug;
+		};
+		B0759D0B254B6A2100AED55C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7XEP77EB7U;
+				INFOPLIST_FILE = "Toptal Food DeliveryUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.toptal.Toptal-Food-DeliveryUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Toptal Food Delivery";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B0759CD9254B6A1F00AED55C /* Build configuration list for PBXProject "Toptal Food Delivery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0759D01254B6A2100AED55C /* Debug */,
+				B0759D02254B6A2100AED55C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0759D03254B6A2100AED55C /* Build configuration list for PBXNativeTarget "Toptal Food Delivery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0759D04254B6A2100AED55C /* Debug */,
+				B0759D05254B6A2100AED55C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0759D06254B6A2100AED55C /* Build configuration list for PBXNativeTarget "Toptal Food DeliveryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0759D07254B6A2100AED55C /* Debug */,
+				B0759D08254B6A2100AED55C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0759D09254B6A2100AED55C /* Build configuration list for PBXNativeTarget "Toptal Food DeliveryUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0759D0A254B6A2100AED55C /* Debug */,
+				B0759D0B254B6A2100AED55C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B0759CD6254B6A1F00AED55C /* Project object */;
+}

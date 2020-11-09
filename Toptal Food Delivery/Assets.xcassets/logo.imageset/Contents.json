@@ -1,0 +1,15 @@
+{
+  "images" : [
+    {
+      "filename" : "Toptal Logo Main Colors RGB.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "preserves-vector-representation" : true
+  }
+}
