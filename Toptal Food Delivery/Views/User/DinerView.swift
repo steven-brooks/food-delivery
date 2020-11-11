@@ -75,35 +75,6 @@ struct DinerView: View {
 	var cartButton: some View {
 		Button(action: { showCart.toggle() }) {
 			Cart(order: $session.order)
-			/*ZStack {
-				Image(systemName: "cart")
-					.resizable()
-					.aspectRatio(contentMode: .fit)
-					.frame(width: 30)
-					.foregroundColor(.toptalBlue)
-					.onReceiveIf(session.order?.meals.publisher) { thing in
-						// do some animation
-						cartAnimationProgress = 1
-						withAnimation { cartAnimationProgress = 0 }
-					}
-					.overlay(Text("\(session.order?.meals.count ?? 0)")
-								.font(.system(size: 11, weight: .bold))
-								.foregroundColor(.white)
-								.background(Circle()
-												.frame(width: 20, height: 20)
-												.foregroundColor(.toptalGreen)
-												.opacity(0.8))
-								.opacity(session.order?.meals.count ?? 0 > 0 ? 1 : 0)
-								.offset(x: 14, y: -12))
-				
-				//animated bubble
-				Circle()
-					.frame(width: 20, height: 20)
-					.foregroundColor(.toptalGreen)
-					.opacity(cartAnimationProgress)
-					.scaleEffect(CGFloat(2 - cartAnimationProgress))
-					.offset(x: 14, y: -12)
-			}*/
 		}
 	}
 	

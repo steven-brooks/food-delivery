@@ -79,10 +79,10 @@ class OrderSession: ObservableObject {
 	
 	@Published var submittedOrder: Order? {
 		didSet {
-			isSubmittingOrder = false
-			if submittedOrder == nil {
+			if isSubmittingOrder,submittedOrder == nil {
 				cartErrorMessage = "There was an error submitting the order"
 			}
+			isSubmittingOrder = false
 		}
 	}
 	
