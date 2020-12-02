@@ -1,1 +1,3 @@
-Toptal Food Delivery
+Sample Food Delivery App
+
+For Diners and Restaurant Owners
