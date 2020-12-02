@@ -46,7 +46,7 @@ struct OrdersView: View {
 		.navigationBarTitle("Orders", displayMode: .inline)
 		.navigationBarItems(trailing: Button(action: { model.getOrders() }) {
 			Image(systemName: "arrow.counterclockwise")
-				.foregroundColor(.appBlue)
+				.foregroundColor(.appRed)
 		})
 	}
 	
@@ -61,7 +61,7 @@ struct OrdersView: View {
 					.padding()
 					.background(RoundedRectangle(cornerRadius: 8)
 									.stroke(lineWidth: 1)
-									.foregroundColor(.appBlue))
+									.foregroundColor(.appRed))
 			}
 		}
 	}
@@ -71,7 +71,7 @@ struct OrdersView_Previews: PreviewProvider {
 	
 	static var model: OrdersViewModel {
 		let restaurant = Restaurant(name: "Restaurant", description: "Description", owner: "Owner")
-		let diner = Diner(firstName: "Diner", lastName: "McGee", username: "username", password: "")
+		let diner = Diner(firstName: "Diner", lastName: "McGee", email: "username")
 		let orders = OrdersViewModel(diner: diner)
 		let meals = [Meal(name: "Meal", description: "Meal", price: 5), Meal(name: "Meal 2", description: "Meal", price: 10)]
 		orders.orders = [Order(restaurant: restaurant, diner: diner, meals: meals),
